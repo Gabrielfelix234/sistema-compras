@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Loja de Maquiagem</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+<h1>💄 Beauty Store</h1>
+<p>Escolha seu produto:</p>
+<label class="opcao"><input type="radio" name="produto" value="1"> Batom</label>
+<label class="opcao"><input type="radio" name="produto" value="2"> Base</label>
+<label class="opcao"><input type="radio" name="produto" value="3"> Máscara de Cílios</label>
+<label class="opcao"><input type="radio" name="produto" value="4"> Paleta de Sombras</label>
+<p>Quantidade:</p>
+<input type="number" id="quantidade" min="1">
+<p>Forma de pagamento:</p>
+<label class="opcao"><input type="radio" name="pagamento" value="1" onclick="mostrarParcelas()"> Dinheiro</label>
+<label class="opcao"><input type="radio" name="pagamento" value="2" onclick="mostrarParcelas()"> Pix</label>
+<label class="opcao"><input type="radio" name="pagamento" value="3" onclick="mostrarParcelas()"> Débito</label>
+<label class="opcao"><input type="radio" name="pagamento" value="4" onclick="mostrarParcelas()"> Crédito</label>
+<div id="parcelasBox" style="display:none;">
+<p>Parcelar (até 5x):</p>
+<input type="number" id="parcelas" min="1" max="5">
+</div>
+<button onclick="adicionar()">Adicionar ao Carrinho</button>
+<div class="carrinho">
+<h2>🛍️ Carrinho</h2>
+<p id="lista"></p>
+<p id="total"></p>
+<button onclick="finalizar()">Finalizar Compra</button>
+</div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
